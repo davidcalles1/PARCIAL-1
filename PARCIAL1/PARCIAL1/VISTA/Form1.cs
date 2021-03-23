@@ -42,5 +42,38 @@ namespace PARCIAL1
         {
 
         }
+
+        private void dtgTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String id = dtgTabla.CurrentRow.Cells[0].Value.ToString();
+            String nombre = dtgTabla.CurrentRow.Cells[1].Value.ToString();
+            String apellido = dtgTabla.CurrentRow.Cells[2].Value.ToString();
+            String dui = dtgTabla.CurrentRow.Cells[3].Value.ToString();
+            
+            String email = dtgTabla.CurrentRow.Cells[3].Value.ToString();
+            String telefono = dtgTabla.CurrentRow.Cells[3].Value.ToString();
+            String direccion = dtgTabla.CurrentRow.Cells[4].Value.ToString();
+            String cargo = dtgTabla.CurrentRow.Cells[3].Value.ToString();
+          
+           
+                
+                txtIDEmpleado.Text= id;
+            txtNombre.Text = nombre;
+            txtApellido.Text = apellido;
+            txtDui.Text = dui;
+             txtEmail.Text = email;
+            
+            txtDireccion.Text = direccion;
+            txtCargo.Text = cargo;
+         ;
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }

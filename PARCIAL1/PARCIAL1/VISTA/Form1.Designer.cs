@@ -29,7 +29,7 @@ namespace PARCIAL1
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.txtIDEmpleado = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDui = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -58,13 +58,13 @@ namespace PARCIAL1
             ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtEmpleado
+            // txtIDEmpleado
             // 
-            this.txtEmpleado.Location = new System.Drawing.Point(109, 78);
-            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(132, 22);
-            this.txtEmpleado.TabIndex = 0;
+            this.txtIDEmpleado.Location = new System.Drawing.Point(109, 78);
+            this.txtIDEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDEmpleado.Name = "txtIDEmpleado";
+            this.txtIDEmpleado.Size = new System.Drawing.Size(132, 22);
+            this.txtIDEmpleado.TabIndex = 0;
             // 
             // txtNombre
             // 
@@ -211,6 +211,7 @@ namespace PARCIAL1
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dtgTabla
             // 
@@ -231,6 +232,7 @@ namespace PARCIAL1
             this.dtgTabla.RowHeadersWidth = 51;
             this.dtgTabla.Size = new System.Drawing.Size(1025, 185);
             this.dtgTabla.TabIndex = 20;
+            this.dtgTabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTabla_CellContentClick);
             // 
             // ColumnId
             // 
@@ -302,7 +304,7 @@ namespace PARCIAL1
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtDui);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtEmpleado);
+            this.Controls.Add(this.txtIDEmpleado);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -315,7 +317,7 @@ namespace PARCIAL1
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEmpleado;
+        private System.Windows.Forms.TextBox txtIDEmpleado;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDui;
         private System.Windows.Forms.TextBox txtDireccion;
