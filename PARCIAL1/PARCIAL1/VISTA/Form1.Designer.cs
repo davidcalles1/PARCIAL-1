@@ -46,7 +46,7 @@ namespace PARCIAL1
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgTabla = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,7 @@ namespace PARCIAL1
             this.ColumnTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmpleado
@@ -212,11 +212,11 @@ namespace PARCIAL1
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgTabla
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnNombre,
             this.ColumnApellido,
@@ -225,12 +225,12 @@ namespace PARCIAL1
             this.ColumnTelefono,
             this.ColumnDireccion,
             this.ColumnCargo});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 310);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1025, 185);
-            this.dataGridView1.TabIndex = 20;
+            this.dtgTabla.Location = new System.Drawing.Point(13, 310);
+            this.dtgTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgTabla.Name = "dtgTabla";
+            this.dtgTabla.RowHeadersWidth = 51;
+            this.dtgTabla.Size = new System.Drawing.Size(1025, 185);
+            this.dtgTabla.TabIndex = 20;
             // 
             // ColumnId
             // 
@@ -285,7 +285,7 @@ namespace PARCIAL1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 494);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgTabla);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -307,7 +307,7 @@ namespace PARCIAL1
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +332,7 @@ namespace PARCIAL1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgTabla;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnApellido;
