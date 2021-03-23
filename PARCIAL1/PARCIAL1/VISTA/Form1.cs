@@ -16,6 +16,7 @@ namespace PARCIAL1
         {
             InitializeComponent();
             carga();
+            clear();
         }
         public void carga()
         {
@@ -32,7 +33,19 @@ namespace PARCIAL1
 
 
         }
-
+        void clear()
+        {
+            txtIDEmpleado.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDui.Clear();
+            txtEmail.Clear();
+             
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+            txtCargo.Clear();
+           
+        }
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -50,28 +63,38 @@ namespace PARCIAL1
             String apellido = dtgTabla.CurrentRow.Cells[2].Value.ToString();
             String dui = dtgTabla.CurrentRow.Cells[3].Value.ToString();
             
-            String email = dtgTabla.CurrentRow.Cells[3].Value.ToString();
-            String telefono = dtgTabla.CurrentRow.Cells[3].Value.ToString();
-            String direccion = dtgTabla.CurrentRow.Cells[4].Value.ToString();
-            String cargo = dtgTabla.CurrentRow.Cells[3].Value.ToString();
+            String email = dtgTabla.CurrentRow.Cells[4].Value.ToString();
+            String telefono = dtgTabla.CurrentRow.Cells[5].Value.ToString();
+            String direccion = dtgTabla.CurrentRow.Cells[6].Value.ToString();
+            String cargo = dtgTabla.CurrentRow.Cells[7].Value.ToString();
           
            
                 
-                txtIDEmpleado.Text= id;
+             txtIDEmpleado.Text= id;
             txtNombre.Text = nombre;
             txtApellido.Text = apellido;
             txtDui.Text = dui;
              txtEmail.Text = email;
-            
+            txtTelefono.Text = telefono;
             txtDireccion.Text = direccion;
             txtCargo.Text = cargo;
-         ;
+         
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            using (EMPLEADOEntities db = new EMPLEADOEntities())
+            {
+                Tlb_Empleado r = new Tlb_Empleado();
+                int eliminar = Convert.ToInt32(txtIDEmpleado.Text);
+                r = db.Tlb_Empleado.Find(eliminar);
+                db.Tlb_Empleado.Remove(r);
+                db.SaveChanges();
+                carga();
+                clear();
 
+            }
 
 
         }
