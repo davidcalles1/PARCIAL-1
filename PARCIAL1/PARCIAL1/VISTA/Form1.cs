@@ -84,18 +84,10 @@ namespace PARCIAL1
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            using (EMPLEADOEntities db = new EMPLEADOEntities())
-            {
-                Tlb_Empleado r = new Tlb_Empleado();
-                int eliminar = Convert.ToInt32(txtIDEmpleado.Text);
-                r = db.Tlb_Empleado.Find(eliminar);
-                db.Tlb_Empleado.Remove(r);
-                db.SaveChanges();
-                carga();
-                clear();
-
-            }
-
+            clsManejoListas lis = new clsManejoListas();
+            lis.delete(Convert.ToInt32(txtIDEmpleado.Text));
+            carga();
+            clear();
 
         }
     }
